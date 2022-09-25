@@ -5,9 +5,7 @@ export async function main(ns) {
 
 	// this is free, but when the script finishes you get an error alert that
 	// you used more memory than you were supposed to :(
-	eval('window.obj = window.obj || {}')
-	obj['mn'] = ns
-	const mn = obj['mn']
+	eval('window.obj = window.obj || {}'); obj['mn'] = ns;  const mn = obj['mn'];
 	mn['tprint'](`Hmm...   hostname is: ${mn['getHostname']()}`)
 
 	let [hostname] = ns.args
